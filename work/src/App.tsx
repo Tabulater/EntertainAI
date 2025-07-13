@@ -26,7 +26,6 @@ const add = (a: number, b: number): number => {
 // 2025-07-13 14:00:43 | edit #57
 useEffect(() => {
   console.log('Mounted');
-}, []);
 // 2025-07-13 14:01:20 | edit #58
 const [count, setCount] = useState(0);
 // 2025-07-13 14:02:39 | edit #60
@@ -37,3 +36,7 @@ const add = (a: number, b: number): number => {
 // TODO: Clean this up
 // 2025-07-13 14:06:43 | edit #67
 // TODO: Clean this up
+// 2025-07-13 14:12:46 | edit #78
+export const Button = () => {
+  return <button>Click me</button>;
+}
