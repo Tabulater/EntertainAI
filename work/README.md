@@ -10,3 +10,13 @@ interface Props {
 useEffect(() => {
   console.log('Mounted');
 }, []);
+// 2025-07-13 13:42:17 | edit #24
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-13 13:46:42 | edit #31
+interface Props {
+  title: string;
+  onClick: () => void;
+}

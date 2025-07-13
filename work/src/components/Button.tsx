@@ -15,3 +15,9 @@ const add = (a: number, b: number): number => {
 const add = (a: number, b: number): number => {
   return a + b;
 }
+// 2025-07-13 13:43:34 | edit #26
+console.log('State updated');
+// 2025-07-13 13:46:05 | edit #30
+export const Button = () => {
+  return <button>Click me</button>;
+}

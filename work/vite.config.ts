@@ -8,9 +8,13 @@ console.log('State updated');
 const add = (a: number, b: number): number => {
 }
 // 2025-07-13 13:39:22 | edit #18
-const add = (a: number, b: number): number => {
   return a + b;
 }
 // 2025-07-13 13:39:48 | edit #19
 // Debug: check state flow
 console.log('State updated');
+// 2025-07-13 13:42:59 | edit #25
+interface Props {
+  title: string;
+  onClick: () => void;
+}
