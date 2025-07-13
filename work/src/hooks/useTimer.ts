@@ -41,3 +41,9 @@ interface Props {
 // 2025-07-13 14:14:03 | edit #80
 // Debug: check state flow
 console.log('State updated');
+// 2025-07-13 14:14:37 | edit #81
+const [count, setCount] = useState(0);
+// 2025-07-13 14:17:09 | edit #86
+useEffect(() => {
+  console.log('Mounted');
+}, []);

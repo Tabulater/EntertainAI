@@ -1,5 +1,4 @@
 // Initialized: vite.config.ts
-// 2025-07-13 13:27:26 | edit #1
 // 2025-07-13 13:29:07 | edit #4
 // Debug: check state flow
 console.log('State updated');
@@ -34,6 +33,13 @@ export const Button = () => {
 // 2025-07-13 14:05:36 | edit #65
 const [count, setCount] = useState(0);
 // 2025-07-13 14:07:38 | edit #69
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-13 14:16:41 | edit #85
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-13 14:18:07 | edit #88
 useEffect(() => {
   console.log('Mounted');
 }, []);

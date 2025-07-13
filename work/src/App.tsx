@@ -1,7 +1,6 @@
 // Initialized: src/App.tsx
 import { useState } from 'react';
 // 2025-07-13 13:27:51 | edit #2
-const [count, setCount] = useState(0);
 // 2025-07-13 13:28:29 | edit #3
 // TODO: Clean this up
 // 2025-07-13 13:34:43 | edit #10
@@ -40,3 +39,9 @@ const add = (a: number, b: number): number => {
 export const Button = () => {
   return <button>Click me</button>;
 }
+// 2025-07-13 14:15:18 | edit #82
+const [count, setCount] = useState(0);
+// 2025-07-13 14:15:43 | edit #83
+useEffect(() => {
+  console.log('Mounted');
+}, []);
