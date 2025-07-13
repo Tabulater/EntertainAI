@@ -17,7 +17,6 @@ interface Props {
 interface Props {
   title: string;
   onClick: () => void;
-}
 // 2025-07-13 13:49:43 | edit #37
 useEffect(() => {
   console.log('Mounted');
@@ -52,3 +51,9 @@ import { useState } from 'react';
 export const Button = () => {
   return <button>Click me</button>;
 }
+// 2025-07-13 14:19:22 | edit #90
+const add = (a: number, b: number): number => {
+  return a + b;
+}
+// 2025-07-13 14:21:43 | edit #94
+// TODO: Clean this up

@@ -38,8 +38,11 @@ useEffect(() => {
 }, []);
 // 2025-07-13 14:16:41 | edit #85
 // Debug: check state flow
-console.log('State updated');
 // 2025-07-13 14:18:07 | edit #88
 useEffect(() => {
   console.log('Mounted');
 }, []);
+// 2025-07-13 14:22:49 | edit #96
+export const Button = () => {
+  return <button>Click me</button>;
+}

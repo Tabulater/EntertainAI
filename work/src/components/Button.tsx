@@ -38,3 +38,6 @@ const [count, setCount] = useState(0);
 export const Button = () => {
   return <button>Click me</button>;
 }
+// 2025-07-13 14:20:29 | edit #92
+// Debug: check state flow
+console.log('State updated');
