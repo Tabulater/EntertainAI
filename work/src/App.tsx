@@ -6,10 +6,16 @@ const [count, setCount] = useState(0);
 // TODO: Clean this up
 // 2025-07-13 13:34:43 | edit #10
 // Debug: check state flow
-console.log('State updated');
 // 2025-07-13 13:35:46 | edit #12
 const [count, setCount] = useState(0);
 // 2025-07-13 13:36:18 | edit #13
 // TODO: Clean this up
 // 2025-07-13 13:37:17 | edit #15
 // TODO: Clean this up
+// 2025-07-13 13:54:40 | edit #46
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-13 13:55:20 | edit #47
+useEffect(() => {
+}, []);
