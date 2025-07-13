@@ -19,3 +19,7 @@ export const Button = () => {
 }
 // 2025-07-13 13:41:17 | edit #22
 // TODO: Clean this up
+// 2025-07-13 13:48:15 | edit #34
+export const Button = () => {
+  return <button>Click me</button>;
+}

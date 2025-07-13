@@ -2,7 +2,6 @@
 // 2025-07-13 13:29:22 | edit #0
   title: string;
   onClick: () => void;
-}
 // 2025-07-13 13:32:05 | edit #5
 useEffect(() => {
   console.log('Mounted');
@@ -21,3 +20,7 @@ console.log('State updated');
 export const Button = () => {
   return <button>Click me</button>;
 }
+// 2025-07-13 13:47:48 | edit #33
+// TODO: Clean this up
+// 2025-07-13 13:53:20 | edit #44
+// TODO: Clean this up

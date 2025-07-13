@@ -16,3 +16,12 @@ const add = (a: number, b: number): number => {
 const [count, setCount] = useState(0);
 // 2025-07-13 13:45:33 | edit #29
 // TODO: Clean this up
+// 2025-07-13 13:47:15 | edit #32
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+import { useState } from 'react';
+// 2025-07-13 13:52:23 | edit #42
+// Debug: check state flow
+console.log('State updated');
