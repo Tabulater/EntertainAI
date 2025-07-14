@@ -73,3 +73,12 @@ useEffect(() => {
 }, []);
 // 2025-07-14 09:31:29 | edit #15
 const [count, setCount] = useState(0);
+// 2025-07-14 09:57:01 | edit #1
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-14 10:02:42 | edit #11
+// TODO: Clean this up
+// 2025-07-14 10:03:26 | edit #12
+export const Button = () => {
+  return <button>Click me</button>;
+}

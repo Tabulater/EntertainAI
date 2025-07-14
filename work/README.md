@@ -21,7 +21,6 @@ useEffect(() => {
   console.log('Mounted');
 }, []);
 // 2025-07-13 13:50:49 | edit #39
-interface Props {
   title: string;
   onClick: () => void;
 }
@@ -29,14 +28,12 @@ interface Props {
 useEffect(() => {
   console.log('Mounted');
 }, []);
-interface Props {
   title: string;
   onClick: () => void;
 }
 interface Props {
   title: string;
   onClick: () => void;
-}
 // 2025-07-13 13:54:04 | edit #45
 // 2025-07-13 13:59:45 | edit #55
 const [count, setCount] = useState(0);
@@ -77,6 +74,30 @@ useEffect(() => {
   console.log('Mounted');
 }, []);
 // 2025-07-14 09:38:48 | edit #26
+const add = (a: number, b: number): number => {
+  return a + b;
+}
+// 2025-07-14 09:42:53 | edit #32
+// TODO: Clean this up
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-14 09:57:39 | edit #2
+const [count, setCount] = useState(0);
+// 2025-07-14 09:58:56 | edit #4
+const add = (a: number, b: number): number => {
+  return a + b;
+}
+// 2025-07-14 09:59:56 | edit #6
+import { useState } from 'react';
+// 2025-07-14 10:00:48 | edit #8
+// TODO: Clean this up
+// 2025-07-14 10:04:24 | edit #13
+// TODO: Clean this up
+// 2025-07-14 10:08:29 | edit #19
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-14 10:10:37 | edit #23
 const add = (a: number, b: number): number => {
   return a + b;
 }

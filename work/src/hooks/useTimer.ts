@@ -73,3 +73,10 @@ const add = (a: number, b: number): number => {
 useEffect(() => {
   console.log('Mounted');
 }, []);
+// 2025-07-14 09:48:44 | edit #40
+import { useState } from 'react';
+// 2025-07-14 09:58:20 | edit #3
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-14 10:07:31 | edit #17
+// TODO: Clean this up
