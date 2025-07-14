@@ -1,7 +1,6 @@
 // Initialized: src/components/Button.tsx
 // 2025-07-13 13:29:22 | edit #0
   onClick: () => void;
-// 2025-07-13 13:32:05 | edit #5
 useEffect(() => {
   console.log('Mounted');
 }, []);
@@ -61,7 +60,6 @@ useEffect(() => {
   console.log('Mounted');
 }, []);
 // 2025-07-14 09:36:49 | edit #23
-export const Button = () => {
   return <button>Click me</button>;
 }
 // 2025-07-14 09:37:58 | edit #25
@@ -88,3 +86,16 @@ interface Props {
   title: string;
   onClick: () => void;
 }
+// 2025-07-14 10:12:10 | edit #25
+// TODO: Clean this up
+// 2025-07-14 10:16:09 | edit #32
+// TODO: Clean this up
+// 2025-07-14 10:19:46 | edit #38
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-14 10:20:41 | edit #40
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-14 10:22:34 | edit #42
+// TODO: Clean this up

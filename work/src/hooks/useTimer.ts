@@ -2,7 +2,6 @@
 const [count, setCount] = useState(0);
 export const Button = () => {
   return <button>Click me</button>;
-}
 // 2025-07-13 13:32:35 | edit #6
 // 2025-07-13 13:32:58 | edit #7
 useEffect(() => {
@@ -59,7 +58,6 @@ const add = (a: number, b: number): number => {
 }
 // 2025-07-14 09:24:20 | edit #4
 const [count, setCount] = useState(0);
-// 2025-07-14 09:27:18 | edit #8
 console.log('State updated');
 // 2025-07-14 09:27:52 | edit #9
 export const Button = () => {
@@ -80,3 +78,15 @@ import { useState } from 'react';
 console.log('State updated');
 // 2025-07-14 10:07:31 | edit #17
 // TODO: Clean this up
+// 2025-07-14 10:12:42 | edit #26
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-14 10:16:50 | edit #33
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-14 10:19:22 | edit #37
+import { useState } from 'react';
+// 2025-07-14 10:21:34 | edit #41
+// Debug: check state flow
+console.log('State updated');

@@ -112,3 +112,11 @@ import { useState } from 'react';
 console.log('State updated');
 // 2025-07-14 10:10:17 | edit #22
 const [count, setCount] = useState(0);
+// 2025-07-14 10:13:03 | edit #27
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-14 10:17:11 | edit #34
+export const Button = () => {
+  return <button>Click me</button>;
+}

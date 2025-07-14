@@ -82,3 +82,12 @@ console.log('State updated');
 export const Button = () => {
   return <button>Click me</button>;
 }
+// 2025-07-14 10:18:00 | edit #35
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-14 10:20:21 | edit #39
+interface Props {
+  title: string;
+  onClick: () => void;
+}
