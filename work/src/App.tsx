@@ -34,13 +34,11 @@ const add = (a: number, b: number): number => {
 // 2025-07-13 14:06:43 | edit #67
 // TODO: Clean this up
 // 2025-07-13 14:12:46 | edit #78
-export const Button = () => {
   return <button>Click me</button>;
 }
 // 2025-07-13 14:15:18 | edit #82
 const [count, setCount] = useState(0);
 // 2025-07-13 14:15:43 | edit #83
-useEffect(() => {
   console.log('Mounted');
 }, []);
 // 2025-07-13 14:20:04 | edit #91
@@ -52,3 +50,38 @@ useEffect(() => {
 // 2025-07-13 14:23:24 | edit #97
 // Debug: check state flow
 console.log('State updated');
+// TODO: Clean this up
+// 2025-07-13 14:24:35 | edit #99
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-13 14:25:37 | edit #101
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-13 14:29:02 | edit #107
+const add = (a: number, b: number): number => {
+  return a + b;
+}
+// 2025-07-13 14:32:06 | edit #112
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-14 09:21:30 | edit #0
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-14 09:33:41 | edit #18
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-14 09:34:08 | edit #19
+const add = (a: number, b: number): number => {
+  return a + b;
+}
+// 2025-07-14 09:37:13 | edit #24
+interface Props {
+  title: string;
+  onClick: () => void;
+}
