@@ -112,3 +112,7 @@ console.log('State updated');
 const [count, setCount] = useState(0);
 // 2025-07-14 21:37:11 | edit #18
 // TODO: Clean this up
+// 2025-07-14 21:40:19 | edit #23
+const add = (a: number, b: number): number => {
+  return a + b;
+}
