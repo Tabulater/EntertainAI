@@ -101,3 +101,8 @@ const add = (a: number, b: number): number => {
 const add = (a: number, b: number): number => {
   return a + b;
 }
+// 2025-07-14 21:44:24 | edit #30
+interface Props {
+  title: string;
+  onClick: () => void;
+}
