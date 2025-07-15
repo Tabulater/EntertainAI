@@ -16,7 +16,6 @@ interface Props {
   title: string;
   onClick: () => void;
 }
-import { useState } from 'react';
 // Debug: check state flow
 console.log('State updated');
 // 2025-07-13 13:56:46 | edit #50
@@ -144,3 +143,11 @@ const add = (a: number, b: number): number => {
 }
 // 2025-07-14 21:57:19 | edit #49
 import { useState } from 'react';
+// 2025-07-14 22:02:51 | edit #56
+// TODO: Clean this up
+// 2025-07-14 22:03:50 | edit #57
+const [count, setCount] = useState(0);
+// 2025-07-14 22:04:28 | edit #58
+useEffect(() => {
+  console.log('Mounted');
+}, []);
