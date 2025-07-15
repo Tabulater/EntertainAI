@@ -3,7 +3,6 @@
 // Debug: check state flow
 // 2025-07-13 13:33:37 | edit #8
 interface Props {
-  title: string;
   onClick: () => void;
 }
 // 2025-07-13 13:40:51 | edit #21
@@ -106,3 +105,7 @@ import { useState } from 'react';
 const add = (a: number, b: number): number => {
   return a + b;
 }
+// 2025-07-14 21:45:54 | edit #33
+const [count, setCount] = useState(0);
+// 2025-07-14 21:49:11 | edit #37
+import { useState } from 'react';

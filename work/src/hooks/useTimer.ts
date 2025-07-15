@@ -15,7 +15,6 @@ export const Button = () => {
 // 2025-07-13 13:41:17 | edit #22
 // TODO: Clean this up
 // 2025-07-13 13:48:15 | edit #34
-export const Button = () => {
   return <button>Click me</button>;
 }
 // 2025-07-13 13:55:50 | edit #48
@@ -106,3 +105,6 @@ interface Props {
   title: string;
   onClick: () => void;
 }
+// 2025-07-14 21:50:03 | edit #38
+// Debug: check state flow
+console.log('State updated');

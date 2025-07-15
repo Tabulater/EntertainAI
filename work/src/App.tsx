@@ -133,3 +133,10 @@ const [count, setCount] = useState(0);
 import { useState } from 'react';
 // 2025-07-14 21:41:54 | edit #26
 // TODO: Clean this up
+// 2025-07-14 21:46:50 | edit #34
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-14 21:47:32 | edit #35
+const add = (a: number, b: number): number => {
+  return a + b;
+}

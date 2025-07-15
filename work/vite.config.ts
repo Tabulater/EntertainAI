@@ -56,7 +56,6 @@ import { useState } from 'react';
 const add = (a: number, b: number): number => {
   return a + b;
 }
-// 2025-07-14 09:40:19 | edit #28
 useEffect(() => {
   console.log('Mounted');
 }, []);
@@ -116,3 +115,7 @@ import { useState } from 'react';
 // TODO: Clean this up
 // 2025-07-14 21:42:35 | edit #27
 const [count, setCount] = useState(0);
+// 2025-07-14 21:48:28 | edit #36
+export const Button = () => {
+  return <button>Click me</button>;
+}
