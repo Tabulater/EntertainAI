@@ -144,7 +144,6 @@ const add = (a: number, b: number): number => {
 export const Button = () => {
   return <button>Click me</button>;
 }
-// 2025-07-14 21:54:18 | edit #45
 // TODO: Clean this up
 // 2025-07-14 21:56:25 | edit #48
 const add = (a: number, b: number): number => {
@@ -160,3 +159,7 @@ export const Button = () => {
 const add = (a: number, b: number): number => {
   return a + b;
 }
+// 2025-07-14 22:13:50 | edit #73
+useEffect(() => {
+  console.log('Mounted');
+}, []);
