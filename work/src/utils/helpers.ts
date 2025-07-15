@@ -22,7 +22,6 @@ console.log('State updated');
 import { useState } from 'react';
 // 2025-07-13 14:03:22 | edit #61
 // Debug: check state flow
-console.log('State updated');
 // 2025-07-13 14:07:11 | edit #68
 // Debug: check state flow
 console.log('State updated');
@@ -157,4 +156,12 @@ console.log('State updated');
 // 2025-07-14 22:07:07 | edit #63
 const add = (a: number, b: number): number => {
   return a + b;
+}
+// 2025-07-14 22:11:21 | edit #69
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-14 22:12:24 | edit #71
+export const Button = () => {
+  return <button>Click me</button>;
 }

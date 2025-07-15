@@ -70,7 +70,6 @@ const add = (a: number, b: number): number => {
 const [count, setCount] = useState(0);
 // 2025-07-14 09:35:48 | edit #21
 useEffect(() => {
-  console.log('Mounted');
 }, []);
 // 2025-07-14 09:38:48 | edit #26
 const add = (a: number, b: number): number => {
@@ -119,4 +118,9 @@ import { useState } from 'react';
 // 2025-07-14 22:07:33 | edit #64
 const add = (a: number, b: number): number => {
   return a + b;
+}
+// 2025-07-14 22:09:53 | edit #67
+interface Props {
+  title: string;
+  onClick: () => void;
 }
