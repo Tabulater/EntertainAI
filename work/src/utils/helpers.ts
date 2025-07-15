@@ -165,3 +165,10 @@ export const Button = () => {
 export const Button = () => {
   return <button>Click me</button>;
 }
+// 2025-07-14 22:22:22 | edit #84
+import { useState } from 'react';
+// 2025-07-14 22:29:37 | edit #94
+interface Props {
+  title: string;
+  onClick: () => void;
+}

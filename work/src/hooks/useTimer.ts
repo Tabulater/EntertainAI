@@ -113,3 +113,9 @@ import { useState } from 'react';
 // TODO: Clean this up
 // 2025-07-14 22:13:14 | edit #72
 const [count, setCount] = useState(0);
+// 2025-07-14 22:21:01 | edit #82
+const [count, setCount] = useState(0);
+// 2025-07-14 22:27:18 | edit #91
+export const Button = () => {
+  return <button>Click me</button>;
+}

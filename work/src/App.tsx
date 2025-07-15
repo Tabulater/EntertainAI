@@ -72,12 +72,10 @@ export const Button = () => {
 // 2025-07-14 09:33:41 | edit #18
   console.log('Mounted');
 }, []);
-// 2025-07-14 09:34:08 | edit #19
 const add = (a: number, b: number): number => {
   return a + b;
 }
 // 2025-07-14 09:37:13 | edit #24
-interface Props {
   title: string;
   onClick: () => void;
 }
@@ -163,3 +161,24 @@ const add = (a: number, b: number): number => {
 useEffect(() => {
   console.log('Mounted');
 }, []);
+// 2025-07-14 22:18:56 | edit #79
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-14 22:19:47 | edit #80
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-14 22:23:46 | edit #86
+  console.log('Mounted');
+}, []);
+// 2025-07-14 22:24:14 | edit #87
+// TODO: Clean this up
+// 2025-07-14 22:25:43 | edit #89
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-14 22:31:41 | edit #98
+const add = (a: number, b: number): number => {
+  return a + b;
+}
