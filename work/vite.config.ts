@@ -17,7 +17,6 @@ interface Props {
 // 2025-07-13 13:49:12 | edit #36
 interface Props {
   title: string;
-  onClick: () => void;
 }
 // 2025-07-13 13:50:08 | edit #38
 const [count, setCount] = useState(0);
@@ -85,7 +84,6 @@ export const Button = () => {
   return <button>Click me</button>;
 }
 // 2025-07-14 10:15:05 | edit #30
-const [count, setCount] = useState(0);
 // 2025-07-14 10:15:30 | edit #31
 import { useState } from 'react';
 // 2025-07-14 10:18:53 | edit #36
@@ -95,3 +93,25 @@ interface Props {
 }
 // 2025-07-14 10:23:06 | edit #43
 const [count, setCount] = useState(0);
+// 2025-07-14 10:24:31 | edit #45
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-14 10:26:16 | edit #47
+const [count, setCount] = useState(0);
+// 2025-07-14 10:27:35 | edit #49
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-14 21:29:33 | edit #6
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-14 21:32:40 | edit #10
+// TODO: Clean this up
+// 2025-07-14 21:34:37 | edit #14
+import { useState } from 'react';
+// 2025-07-14 21:39:17 | edit #21
+// TODO: Clean this up
