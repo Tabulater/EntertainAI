@@ -109,3 +109,8 @@ const add = (a: number, b: number): number => {
 const [count, setCount] = useState(0);
 // 2025-07-14 21:49:11 | edit #37
 import { useState } from 'react';
+// 2025-07-14 21:59:34 | edit #52
+interface Props {
+  title: string;
+  onClick: () => void;
+}

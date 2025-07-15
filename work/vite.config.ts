@@ -110,7 +110,6 @@ interface Props {
 // 2025-07-14 21:32:40 | edit #10
 // TODO: Clean this up
 // 2025-07-14 21:34:37 | edit #14
-import { useState } from 'react';
 // 2025-07-14 21:39:17 | edit #21
 // TODO: Clean this up
 // 2025-07-14 21:42:35 | edit #27
@@ -118,4 +117,21 @@ const [count, setCount] = useState(0);
 // 2025-07-14 21:48:28 | edit #36
 export const Button = () => {
   return <button>Click me</button>;
+}
+// 2025-07-14 21:50:58 | edit #39
+// 2025-07-14 21:51:30 | edit #40
+// TODO: Clean this up
+// 2025-07-14 21:52:47 | edit #42
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-14 21:53:23 | edit #43
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-14 22:00:33 | edit #53
+interface Props {
+  title: string;
+  onClick: () => void;
 }

@@ -140,3 +140,13 @@ console.log('State updated');
 const add = (a: number, b: number): number => {
   return a + b;
 }
+// 2025-07-14 21:52:03 | edit #41
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-14 21:54:18 | edit #45
+// TODO: Clean this up
+// 2025-07-14 21:56:25 | edit #48
+const add = (a: number, b: number): number => {
+  return a + b;
+}
