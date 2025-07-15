@@ -152,3 +152,7 @@ const add = (a: number, b: number): number => {
 }
 // 2025-07-14 22:02:03 | edit #55
 const [count, setCount] = useState(0);
+// 2025-07-14 22:06:17 | edit #62
+export const Button = () => {
+  return <button>Click me</button>;
+}
