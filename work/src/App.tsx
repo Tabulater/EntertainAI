@@ -73,7 +73,6 @@ export const Button = () => {
   console.log('Mounted');
 }, []);
 const add = (a: number, b: number): number => {
-  return a + b;
 }
 // 2025-07-14 09:37:13 | edit #24
   title: string;
@@ -186,3 +185,14 @@ const add = (a: number, b: number): number => {
 const add = (a: number, b: number): number => {
   return a + b;
 }
+// 2025-07-14 22:43:12 | edit #115
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-14 22:45:21 | edit #118
+// TODO: Clean this up
+// 2025-07-14 22:47:07 | edit #120
+useEffect(() => {
+  console.log('Mounted');
+}, []);

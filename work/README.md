@@ -2,7 +2,6 @@
 // 2025-07-13 13:31:02 | edit #3
 // Debug: check state flow
 // 2025-07-13 13:33:37 | edit #8
-interface Props {
   onClick: () => void;
 }
 // 2025-07-13 13:40:51 | edit #21
@@ -67,7 +66,6 @@ const add = (a: number, b: number): number => {
 // 2025-07-14 09:25:59 | edit #6
 // TODO: Clean this up
 // 2025-07-14 09:34:54 | edit #20
-const [count, setCount] = useState(0);
 // 2025-07-14 09:35:48 | edit #21
 useEffect(() => {
 }, []);
@@ -140,3 +138,19 @@ import { useState } from 'react';
 export const Button = () => {
   return <button>Click me</button>;
 }
+// 2025-07-14 22:41:34 | edit #113
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-14 22:49:36 | edit #123
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-14 22:50:29 | edit #124
+const add = (a: number, b: number): number => {
+  return a + b;
+}
+// 2025-07-14 22:55:34 | edit #131
+useEffect(() => {
+  console.log('Mounted');
+}, []);
