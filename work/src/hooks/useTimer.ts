@@ -137,3 +137,8 @@ useEffect(() => {
 }, []);
 // 2025-07-14 22:52:04 | edit #126
 const [count, setCount] = useState(0);
+// 2025-07-14 22:56:51 | edit #134
+interface Props {
+  title: string;
+  onClick: () => void;
+}
