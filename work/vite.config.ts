@@ -152,3 +152,7 @@ const add = (a: number, b: number): number => {
 console.log('State updated');
 // 2025-07-14 22:30:44 | edit #96
 const [count, setCount] = useState(0);
+// 2025-07-14 22:34:22 | edit #102
+useEffect(() => {
+  console.log('Mounted');
+}, []);
