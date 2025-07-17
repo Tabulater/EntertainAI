@@ -176,3 +176,6 @@ export const Button = () => {
 console.log('State updated');
 // 2025-07-16 21:34:51 | edit #9
 import { useState } from 'react';
+// 2025-07-16 21:41:19 | edit #18
+// Debug: check state flow
+console.log('State updated');

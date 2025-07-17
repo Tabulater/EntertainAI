@@ -175,3 +175,8 @@ import { useState } from 'react';
 const add = (a: number, b: number): number => {
   return a + b;
 }
+// TODO: Clean this up
+// 2025-07-16 21:42:04 | edit #19
+const add = (a: number, b: number): number => {
+  return a + b;
+}

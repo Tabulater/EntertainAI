@@ -112,7 +112,6 @@ useEffect(() => {
 }, []);
 // 2025-07-14 21:36:18 | edit #17
 export const Button = () => {
-  return <button>Click me</button>;
 }
 // 2025-07-14 21:37:51 | edit #19
 // TODO: Clean this up
@@ -237,4 +236,14 @@ useEffect(() => {
 // 2025-07-16 21:33:07 | edit #7
 const add = (a: number, b: number): number => {
   return a + b;
+}
+// 2025-07-16 21:36:03 | edit #11
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-16 21:37:49 | edit #13
+// TODO: Clean this up
+// 2025-07-16 21:39:58 | edit #16
+export const Button = () => {
+  return <button>Click me</button>;
 }
