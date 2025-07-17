@@ -234,3 +234,10 @@ import { useState } from 'react';
 // 2025-07-16 23:09:36 | edit #152
 // Debug: check state flow
 console.log('State updated');
+// 2025-07-16 23:12:49 | edit #156
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-16 23:15:54 | edit #161
+useEffect(() => {
+  console.log('Mounted');
+}, []);

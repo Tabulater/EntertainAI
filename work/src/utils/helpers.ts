@@ -349,3 +349,14 @@ import { useState } from 'react';
 export const Button = () => {
   return <button>Click me</button>;
 }
+// 2025-07-16 23:15:24 | edit #160
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-16 23:16:36 | edit #162
+// TODO: Clean this up
+// 2025-07-16 23:17:08 | edit #163
+interface Props {
+  title: string;
+  onClick: () => void;
+}

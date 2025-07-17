@@ -105,7 +105,6 @@ const [count, setCount] = useState(0);
 // 2025-07-14 21:30:30 | edit #7
 // Debug: check state flow
 console.log('State updated');
-// 2025-07-14 21:33:29 | edit #11
 const [count, setCount] = useState(0);
 // 2025-07-14 21:37:11 | edit #18
 // TODO: Clean this up
@@ -240,3 +239,11 @@ interface Props {
 }
 // 2025-07-16 23:10:10 | edit #153
 const [count, setCount] = useState(0);
+// 2025-07-16 23:14:48 | edit #159
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-16 23:20:38 | edit #168
+useEffect(() => {
+  console.log('Mounted');
+}, []);
