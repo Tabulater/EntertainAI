@@ -278,3 +278,10 @@ const add = (a: number, b: number): number => {
 useEffect(() => {
   console.log('Mounted');
 }, []);
+// 2025-07-16 22:55:52 | edit #132
+// TODO: Clean this up
+// 2025-07-16 22:56:32 | edit #133
+interface Props {
+  title: string;
+  onClick: () => void;
+}
