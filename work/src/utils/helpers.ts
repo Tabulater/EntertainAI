@@ -254,3 +254,8 @@ useEffect(() => {
 // 2025-07-16 21:50:06 | edit #32
 // Debug: check state flow
 console.log('State updated');
+// 2025-07-16 21:57:01 | edit #43
+interface Props {
+  title: string;
+  onClick: () => void;
+}
