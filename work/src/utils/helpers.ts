@@ -323,3 +323,13 @@ export const Button = () => {
 export const Button = () => {
   return <button>Click me</button>;
 }
+// 2025-07-16 22:52:00 | edit #126
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-16 22:52:35 | edit #127
+interface Props {
+  title: string;
+  onClick: () => void;
+}
