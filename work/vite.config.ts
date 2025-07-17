@@ -41,7 +41,6 @@ useEffect(() => {
 }, []);
 // 2025-07-13 14:22:49 | edit #96
 }
-// 2025-07-13 14:28:31 | edit #106
 const [count, setCount] = useState(0);
 export const Button = () => {
   return <button>Click me</button>;
@@ -222,3 +221,11 @@ export const Button = () => {
 // 2025-07-16 22:31:49 | edit #96
 // Debug: check state flow
 console.log('State updated');
+// 2025-07-16 22:47:58 | edit #120
+const add = (a: number, b: number): number => {
+  return a + b;
+}
+// 2025-07-16 22:49:28 | edit #122
+useEffect(() => {
+  console.log('Mounted');
+}, []);
