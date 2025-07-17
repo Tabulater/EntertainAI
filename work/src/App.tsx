@@ -52,7 +52,6 @@ export const Button = () => {
   return <button>Click me</button>;
 }
 // 2025-07-13 14:25:37 | edit #101
-useEffect(() => {
   console.log('Mounted');
 }, []);
 const add = (a: number, b: number): number => {
@@ -317,4 +316,8 @@ interface Props {
 interface Props {
   title: string;
   onClick: () => void;
+}
+// 2025-07-17 00:22:48 | edit #259
+const add = (a: number, b: number): number => {
+  return a + b;
 }
