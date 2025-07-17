@@ -19,7 +19,6 @@ interface Props {
 // Debug: check state flow
 console.log('State updated');
 // 2025-07-13 13:56:46 | edit #50
-import { useState } from 'react';
 // 2025-07-13 14:03:22 | edit #61
 // Debug: check state flow
 // 2025-07-13 14:07:11 | edit #68
@@ -217,3 +216,25 @@ console.log('State updated');
 // 2025-07-14 23:01:30 | edit #142
 // Debug: check state flow
 console.log('State updated');
+// 2025-07-14 23:08:50 | edit #152
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-14 23:12:26 | edit #157
+  console.log('Mounted');
+}, []);
+// 2025-07-14 23:13:04 | edit #158
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-14 23:13:55 | edit #159
+const add = (a: number, b: number): number => {
+  return a + b;
+}
+// 2025-07-14 23:21:00 | edit #160
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-16 21:33:07 | edit #7
+const add = (a: number, b: number): number => {
+  return a + b;
+}

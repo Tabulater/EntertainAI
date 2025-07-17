@@ -167,3 +167,12 @@ console.log('State updated');
 // TODO: Clean this up
 // 2025-07-14 23:02:29 | edit #143
 // TODO: Clean this up
+// 2025-07-14 23:11:31 | edit #156
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-16 21:30:18 | edit #4
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-16 21:34:51 | edit #9
+import { useState } from 'react';

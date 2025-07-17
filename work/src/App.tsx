@@ -33,7 +33,6 @@ const add = (a: number, b: number): number => {
 // 2025-07-13 14:06:43 | edit #67
 // TODO: Clean this up
 // 2025-07-13 14:12:46 | edit #78
-  return <button>Click me</button>;
 }
 // 2025-07-13 14:15:18 | edit #82
 const [count, setCount] = useState(0);
@@ -197,3 +196,19 @@ useEffect(() => {
 }, []);
 // 2025-07-14 23:00:00 | edit #139
 import { useState } from 'react';
+// 2025-07-14 23:03:18 | edit #144
+const [count, setCount] = useState(0);
+// 2025-07-14 23:05:08 | edit #147
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-14 23:05:55 | edit #148
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-14 23:10:06 | edit #154
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-14 23:10:41 | edit #155
+const [count, setCount] = useState(0);
