@@ -337,3 +337,6 @@ interface Props {
 useEffect(() => {
   console.log('Mounted');
 }, []);
+// 2025-07-16 22:58:16 | edit #135
+// Debug: check state flow
+console.log('State updated');
