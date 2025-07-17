@@ -64,7 +64,6 @@ const add = (a: number, b: number): number => {
 // 2025-07-14 09:25:59 | edit #6
 // TODO: Clean this up
 // 2025-07-14 09:34:54 | edit #20
-useEffect(() => {
 }, []);
 // 2025-07-14 09:38:48 | edit #26
 const add = (a: number, b: number): number => {
@@ -204,3 +203,14 @@ export const Button = () => {
 console.log('State updated');
 // 2025-07-16 22:12:03 | edit #66
 // TODO: Clean this up
+// 2025-07-16 22:18:46 | edit #77
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-16 22:20:25 | edit #80
+// TODO: Clean this up
+// 2025-07-16 22:30:58 | edit #95
+interface Props {
+  title: string;
+  onClick: () => void;
+}
