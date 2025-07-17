@@ -268,3 +268,6 @@ useEffect(() => {
 }, []);
 // 2025-07-16 22:05:27 | edit #55
 // TODO: Clean this up
+// 2025-07-16 22:09:43 | edit #63
+// Debug: check state flow
+console.log('State updated');

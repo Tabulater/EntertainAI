@@ -189,3 +189,16 @@ const [count, setCount] = useState(0);
 // 2025-07-16 22:03:48 | edit #53
 // Debug: check state flow
 console.log('State updated');
+// 2025-07-16 22:05:54 | edit #56
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-16 22:06:27 | edit #57
+// TODO: Clean this up
+// 2025-07-16 22:06:50 | edit #58
+const [count, setCount] = useState(0);
+// 2025-07-16 22:07:39 | edit #59
+export const Button = () => {
+  return <button>Click me</button>;
+}

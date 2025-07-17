@@ -196,3 +196,10 @@ interface Props {
   title: string;
   onClick: () => void;
 }
+// 2025-07-16 22:08:36 | edit #61
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-16 22:08:56 | edit #62
+// Debug: check state flow
+console.log('State updated');
