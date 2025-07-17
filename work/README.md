@@ -274,3 +274,6 @@ const [count, setCount] = useState(0);
 const add = (a: number, b: number): number => {
   return a + b;
 }
+// 2025-07-16 23:58:50 | edit #224
+// Debug: check state flow
+console.log('State updated');
