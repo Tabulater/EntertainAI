@@ -255,3 +255,12 @@ const [count, setCount] = useState(0);
 export const Button = () => {
   return <button>Click me</button>;
 }
+// 2025-07-16 23:47:50 | edit #207
+import { useState } from 'react';
+// 2025-07-16 23:52:02 | edit #213
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-16 23:52:26 | edit #214
+// TODO: Clean this up
