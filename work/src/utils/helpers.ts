@@ -300,3 +300,8 @@ export const Button = () => {
 // 2025-07-16 22:37:16 | edit #104
 // Debug: check state flow
 console.log('State updated');
+// 2025-07-16 22:41:02 | edit #110
+interface Props {
+  title: string;
+  onClick: () => void;
+}

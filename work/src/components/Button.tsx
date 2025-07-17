@@ -220,3 +220,8 @@ export const Button = () => {
 }
 // 2025-07-16 22:34:08 | edit #99
 // TODO: Clean this up
+// 2025-07-16 22:40:23 | edit #109
+interface Props {
+  title: string;
+  onClick: () => void;
+}
