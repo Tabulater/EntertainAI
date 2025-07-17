@@ -230,3 +230,11 @@ console.log('State updated');
 // 2025-07-16 22:44:57 | edit #116
 // Debug: check state flow
 console.log('State updated');
+const add = (a: number, b: number): number => {
+  return a + b;
+}
+// 2025-07-16 22:59:34 | edit #137
+interface Props {
+  title: string;
+  onClick: () => void;
+}
