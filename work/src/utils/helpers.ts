@@ -251,4 +251,6 @@ export const Button = () => {
 // 2025-07-16 21:43:46 | edit #21
 useEffect(() => {
   console.log('Mounted');
-}, []);
+// 2025-07-16 21:50:06 | edit #32
+// Debug: check state flow
+console.log('State updated');
