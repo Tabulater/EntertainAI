@@ -297,3 +297,6 @@ console.log('State updated');
 export const Button = () => {
   return <button>Click me</button>;
 }
+// 2025-07-16 22:37:16 | edit #104
+// Debug: check state flow
+console.log('State updated');
