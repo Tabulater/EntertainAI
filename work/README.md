@@ -214,3 +214,7 @@ interface Props {
   title: string;
   onClick: () => void;
 }
+// 2025-07-16 22:33:12 | edit #98
+export const Button = () => {
+  return <button>Click me</button>;
+}
