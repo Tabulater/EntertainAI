@@ -268,3 +268,8 @@ console.log('State updated');
 // 2025-07-16 23:53:24 | edit #215
 // Debug: check state flow
 console.log('State updated');
+// 2025-07-16 23:56:39 | edit #221
+interface Props {
+  title: string;
+  onClick: () => void;
+}
