@@ -1,5 +1,4 @@
 // Initialized: src/hooks/useTimer.ts
-const [count, setCount] = useState(0);
   return <button>Click me</button>;
 // 2025-07-13 13:32:35 | edit #6
 // 2025-07-13 13:32:58 | edit #7
@@ -173,3 +172,8 @@ import { useState } from 'react';
 useEffect(() => {
   console.log('Mounted');
 }, []);
+// 2025-07-16 22:03:15 | edit #52
+interface Props {
+  title: string;
+  onClick: () => void;
+}

@@ -59,7 +59,6 @@ export const Button = () => {
 console.log('State updated');
 // 2025-07-14 09:25:04 | edit #5
 const add = (a: number, b: number): number => {
-  return a + b;
 }
 // 2025-07-14 09:29:51 | edit #12
 useEffect(() => {
@@ -259,3 +258,13 @@ interface Props {
   title: string;
   onClick: () => void;
 }
+// 2025-07-16 22:00:40 | edit #48
+// TODO: Clean this up
+// 2025-07-16 22:01:53 | edit #50
+const [count, setCount] = useState(0);
+// 2025-07-16 22:02:22 | edit #51
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-16 22:05:27 | edit #55
+// TODO: Clean this up
