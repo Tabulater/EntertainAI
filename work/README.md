@@ -29,7 +29,6 @@ useEffect(() => {
   title: string;
   onClick: () => void;
 }
-interface Props {
   title: string;
   onClick: () => void;
 // 2025-07-13 13:54:04 | edit #45
@@ -179,3 +178,12 @@ import { useState } from 'react';
 // TODO: Clean this up
 // 2025-07-16 21:40:51 | edit #17
 // TODO: Clean this up
+// 2025-07-16 21:45:48 | edit #25
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-16 21:47:01 | edit #27
+export const Button = () => {
+  return <button>Click me</button>;
+}

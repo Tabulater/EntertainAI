@@ -220,3 +220,16 @@ interface Props {
   title: string;
   onClick: () => void;
 }
+// 2025-07-16 21:44:42 | edit #23
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-16 21:45:04 | edit #24
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-16 21:47:46 | edit #29
+interface Props {
+  title: string;
+  onClick: () => void;
+}

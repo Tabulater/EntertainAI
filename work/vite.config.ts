@@ -65,7 +65,6 @@ useEffect(() => {
 // 2025-07-14 10:01:39 | edit #9
 interface Props {
   title: string;
-  onClick: () => void;
 // 2025-07-14 10:05:23 | edit #14
 // TODO: Clean this up
 // 2025-07-14 10:07:55 | edit #18
@@ -180,3 +179,7 @@ const add = (a: number, b: number): number => {
 const add = (a: number, b: number): number => {
   return a + b;
 }
+// 2025-07-16 21:47:25 | edit #28
+import { useState } from 'react';
+// 2025-07-16 21:49:22 | edit #31
+// TODO: Clean this up
