@@ -207,7 +207,6 @@ const add = (a: number, b: number): number => {
 }
 // 2025-07-16 22:29:00 | edit #92
 interface Props {
-  onClick: () => void;
 }
 // 2025-07-16 22:29:43 | edit #93
 export const Button = () => {
@@ -272,7 +271,6 @@ const add = (a: number, b: number): number => {
 // 2025-07-17 00:05:42 | edit #235
 const add = (a: number, b: number): number => {
   return a + b;
-}
 // 2025-07-17 00:15:44 | edit #249
 // Debug: check state flow
 console.log('State updated');
@@ -294,3 +292,10 @@ interface Props {
   title: string;
   onClick: () => void;
 }
+// 2025-07-20 12:57:24 | edit #17
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-20 12:58:12 | edit #19
+import { useState } from 'react';

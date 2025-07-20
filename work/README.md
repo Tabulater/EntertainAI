@@ -73,7 +73,6 @@ console.log('State updated');
 const [count, setCount] = useState(0);
 // 2025-07-14 09:58:56 | edit #4
 const add = (a: number, b: number): number => {
-  return a + b;
 }
 // 2025-07-14 09:59:56 | edit #6
 import { useState } from 'react';
@@ -309,3 +308,7 @@ const add = (a: number, b: number): number => {
 const [count, setCount] = useState(0);
 // 2025-07-20 12:48:44 | edit #6
 // TODO: Clean this up
+// 2025-07-20 13:00:32 | edit #23
+export const Button = () => {
+  return <button>Click me</button>;
+}
