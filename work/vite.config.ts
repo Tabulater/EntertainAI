@@ -371,3 +371,6 @@ import { useState } from 'react';
 export const Button = () => {
   return <button>Click me</button>;
 }
+// 2025-07-20 14:48:48 | edit #177
+// Debug: check state flow
+console.log('State updated');

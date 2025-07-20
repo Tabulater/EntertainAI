@@ -377,3 +377,10 @@ interface Props {
 }
 // 2025-07-20 14:46:12 | edit #173
 import { useState } from 'react';
+// 2025-07-20 14:49:21 | edit #178
+import { useState } from 'react';
+// 2025-07-20 14:49:59 | edit #179
+interface Props {
+  title: string;
+  onClick: () => void;
+}

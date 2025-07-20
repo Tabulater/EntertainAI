@@ -365,3 +365,7 @@ interface Props {
 }
 // 2025-07-20 14:36:25 | edit #160
 // TODO: Clean this up
+// 2025-07-20 14:48:16 | edit #176
+export const Button = () => {
+  return <button>Click me</button>;
+}
