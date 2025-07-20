@@ -165,13 +165,11 @@ useEffect(() => {
 import { useState } from 'react';
 // 2025-07-16 21:27:44 | edit #1
 import { useState } from 'react';
-// 2025-07-16 21:31:15 | edit #5
 // TODO: Clean this up
 // 2025-07-16 21:40:51 | edit #17
 // 2025-07-16 21:45:48 | edit #25
 interface Props {
   title: string;
-  onClick: () => void;
 }
 // 2025-07-16 21:47:01 | edit #27
 export const Button = () => {
@@ -425,3 +423,18 @@ import { useState } from 'react';
 useEffect(() => {
   console.log('Mounted');
 }, []);
+// 2025-07-20 15:14:54 | edit #216
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-20 15:18:27 | edit #222
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-20 15:19:14 | edit #224
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-20 15:22:29 | edit #228
+export const Button = () => {
+  return <button>Click me</button>;
+}

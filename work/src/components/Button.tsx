@@ -87,7 +87,6 @@ interface Props {
 // TODO: Clean this up
 // 2025-07-14 10:19:46 | edit #38
 // Debug: check state flow
-console.log('State updated');
 // 2025-07-14 10:20:41 | edit #40
 useEffect(() => {
 }, []);
@@ -318,7 +317,6 @@ interface Props {
 // TODO: Clean this up
 // 2025-07-20 13:37:00 | edit #77
 export const Button = () => {
-  return <button>Click me</button>;
 }
 // 2025-07-20 13:38:25 | edit #79
 interface Props {
@@ -363,7 +361,6 @@ import { useState } from 'react';
 export const Button = () => {
   return <button>Click me</button>;
 }
-// 2025-07-20 14:42:20 | edit #167
 import { useState } from 'react';
 // 2025-07-20 14:44:17 | edit #170
 import { useState } from 'react';
@@ -408,3 +405,17 @@ export const Button = () => {
 useEffect(() => {
   console.log('Mounted');
 }, []);
+// 2025-07-20 15:15:42 | edit #217
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-20 15:16:04 | edit #218
+// TODO: Clean this up
+// 2025-07-20 15:18:52 | edit #223
+// TODO: Clean this up
+// 2025-07-20 15:22:55 | edit #229
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-20 15:23:52 | edit #230
+import { useState } from 'react';
