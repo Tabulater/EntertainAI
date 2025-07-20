@@ -356,7 +356,6 @@ const [count, setCount] = useState(0);
 // 2025-07-16 23:33:00 | edit #185
 const [count, setCount] = useState(0);
 // 2025-07-16 23:33:48 | edit #186
-import { useState } from 'react';
 // Debug: check state flow
 console.log('State updated');
 // 2025-07-16 23:39:01 | edit #194
@@ -475,4 +474,9 @@ const [count, setCount] = useState(0);
 // 2025-07-20 14:31:54 | edit #154
 const add = (a: number, b: number): number => {
   return a + b;
+}
+// 2025-07-20 14:33:26 | edit #156
+interface Props {
+  title: string;
+  onClick: () => void;
 }
