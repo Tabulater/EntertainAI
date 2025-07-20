@@ -27,7 +27,6 @@ interface Props {
 }
 // 2025-07-13 14:14:03 | edit #80
 // Debug: check state flow
-console.log('State updated');
 // 2025-07-13 14:14:37 | edit #81
 const [count, setCount] = useState(0);
 // 2025-07-13 14:17:09 | edit #86
@@ -35,7 +34,6 @@ const [count, setCount] = useState(0);
 }, []);
 // 2025-07-13 14:26:40 | edit #103
 export const Button = () => {
-  return <button>Click me</button>;
 }
 // 2025-07-13 14:29:33 | edit #108
 // TODO: Clean this up
@@ -94,7 +92,6 @@ interface Props {
 // 2025-07-14 21:58:14 | edit #50
 import { useState } from 'react';
 // 2025-07-14 22:05:27 | edit #60
-// TODO: Clean this up
 const [count, setCount] = useState(0);
 const [count, setCount] = useState(0);
 // 2025-07-14 22:27:18 | edit #91
@@ -368,4 +365,18 @@ interface Props {
 // 2025-07-20 14:48:16 | edit #176
 export const Button = () => {
   return <button>Click me</button>;
+}
+// 2025-07-20 14:54:42 | edit #187
+import { useState } from 'react';
+// 2025-07-20 14:55:11 | edit #188
+const [count, setCount] = useState(0);
+// 2025-07-20 15:01:31 | edit #197
+const [count, setCount] = useState(0);
+// 2025-07-20 15:07:05 | edit #205
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-20 15:08:59 | edit #207
+interface Props {
+  title: string;
+  onClick: () => void;
 }
