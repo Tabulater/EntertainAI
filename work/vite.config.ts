@@ -400,3 +400,12 @@ import { useState } from 'react';
 const add = (a: number, b: number): number => {
   return a + b;
 }
+// 2025-07-20 15:27:04 | edit #234
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-20 15:29:43 | edit #238
+interface Props {
+  title: string;
+  onClick: () => void;
+}
