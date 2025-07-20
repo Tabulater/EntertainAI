@@ -411,3 +411,8 @@ import { useState } from 'react';
 // 2025-07-20 13:06:46 | edit #33
 // Debug: check state flow
 console.log('State updated');
+// 2025-07-20 13:15:25 | edit #46
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-20 13:16:14 | edit #48
+// TODO: Clean this up
