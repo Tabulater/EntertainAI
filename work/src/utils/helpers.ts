@@ -422,3 +422,11 @@ const add = (a: number, b: number): number => {
 }
 // 2025-07-20 13:19:34 | edit #53
 // TODO: Clean this up
+// 2025-07-20 13:22:04 | edit #57
+const add = (a: number, b: number): number => {
+  return a + b;
+}
+// 2025-07-20 13:23:36 | edit #59
+useEffect(() => {
+  console.log('Mounted');
+}, []);
