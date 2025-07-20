@@ -408,3 +408,6 @@ useEffect(() => {
 }, []);
 // 2025-07-20 12:59:14 | edit #21
 import { useState } from 'react';
+// 2025-07-20 13:06:46 | edit #33
+// Debug: check state flow
+console.log('State updated');

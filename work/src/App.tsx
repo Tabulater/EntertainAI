@@ -335,3 +335,7 @@ interface Props {
 // TODO: Clean this up
 // 2025-07-20 12:56:34 | edit #16
 const [count, setCount] = useState(0);
+// 2025-07-20 13:02:55 | edit #27
+export const Button = () => {
+  return <button>Click me</button>;
+}

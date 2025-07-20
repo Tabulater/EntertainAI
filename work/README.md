@@ -202,7 +202,6 @@ console.log('State updated');
 export const Button = () => {
   return <button>Click me</button>;
 }
-// 2025-07-16 22:20:25 | edit #80
 // TODO: Clean this up
 // 2025-07-16 22:30:58 | edit #95
 interface Props {
@@ -268,7 +267,6 @@ interface Props {
 // 2025-07-16 23:56:12 | edit #220
 const [count, setCount] = useState(0);
 // 2025-07-16 23:57:33 | edit #222
-const add = (a: number, b: number): number => {
   return a + b;
 }
 // 2025-07-16 23:58:50 | edit #224
@@ -312,3 +310,11 @@ const [count, setCount] = useState(0);
 export const Button = () => {
   return <button>Click me</button>;
 }
+// 2025-07-20 13:01:29 | edit #25
+import { useState } from 'react';
+// 2025-07-20 13:06:22 | edit #32
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-20 13:08:58 | edit #36
+const [count, setCount] = useState(0);

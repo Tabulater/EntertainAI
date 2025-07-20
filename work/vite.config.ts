@@ -122,7 +122,6 @@ useEffect(() => {
   console.log('Mounted');
 }, []);
 interface Props {
-  title: string;
   onClick: () => void;
 // 2025-07-14 22:17:01 | edit #77
 interface Props {
@@ -237,7 +236,6 @@ console.log('State updated');
 useEffect(() => {
   console.log('Mounted');
 // 2025-07-16 23:22:18 | edit #170
-useEffect(() => {
   console.log('Mounted');
 }, []);
 // 2025-07-16 23:25:00 | edit #174
@@ -285,7 +283,6 @@ const [count, setCount] = useState(0);
 // TODO: Clean this up
 // 2025-07-20 12:44:59 | edit #1
 import { useState } from 'react';
-// 2025-07-20 12:47:47 | edit #5
 import { useState } from 'react';
 // 2025-07-20 12:55:19 | edit #14
 interface Props {
@@ -299,3 +296,22 @@ interface Props {
 }
 // 2025-07-20 12:58:12 | edit #19
 import { useState } from 'react';
+// 2025-07-20 13:00:57 | edit #24
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-20 13:03:30 | edit #28
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-20 13:03:58 | edit #29
+const [count, setCount] = useState(0);
+// 2025-07-20 13:04:45 | edit #30
+import { useState } from 'react';
+// 2025-07-20 13:07:44 | edit #34
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// Debug: check state flow
+console.log('State updated');
