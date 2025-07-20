@@ -195,7 +195,6 @@ const [count, setCount] = useState(0);
 // Debug: check state flow
 console.log('State updated');
 // 2025-07-16 22:25:39 | edit #87
-useEffect(() => {
   console.log('Mounted');
 }, []);
 // 2025-07-16 22:27:22 | edit #89
@@ -362,3 +361,9 @@ console.log('State updated');
 // TODO: Clean this up
 // 2025-07-20 14:16:57 | edit #133
 // TODO: Clean this up
+// 2025-07-20 14:25:44 | edit #146
+import { useState } from 'react';
+// 2025-07-20 14:30:16 | edit #152
+export const Button = () => {
+  return <button>Click me</button>;
+}

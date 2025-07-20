@@ -359,3 +359,8 @@ const add = (a: number, b: number): number => {
 }
 // 2025-07-20 14:12:25 | edit #127
 const [count, setCount] = useState(0);
+// 2025-07-20 14:26:31 | edit #147
+interface Props {
+  title: string;
+  onClick: () => void;
+}

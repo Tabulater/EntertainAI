@@ -377,8 +377,12 @@ export const Button = () => {
 const [count, setCount] = useState(0);
 // 2025-07-20 14:22:04 | edit #140
 interface Props {
-  title: string;
   onClick: () => void;
 }
 // 2025-07-20 14:23:26 | edit #142
 // TODO: Clean this up
+// 2025-07-20 14:27:32 | edit #149
+const [count, setCount] = useState(0);
+// 2025-07-20 14:28:29 | edit #150
+// Debug: check state flow
+console.log('State updated');

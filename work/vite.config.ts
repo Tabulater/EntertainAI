@@ -6,7 +6,6 @@ const add = (a: number, b: number): number => {
 // 2025-07-13 13:39:22 | edit #18
   return a + b;
 }
-// 2025-07-13 13:39:48 | edit #19
 // Debug: check state flow
 console.log('State updated');
 // 2025-07-13 13:42:59 | edit #25
@@ -362,3 +361,7 @@ console.log('State updated');
 // 2025-07-20 14:24:12 | edit #143
 // Debug: check state flow
 console.log('State updated');
+// 2025-07-20 14:25:17 | edit #145
+export const Button = () => {
+  return <button>Click me</button>;
+}
