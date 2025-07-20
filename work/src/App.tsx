@@ -341,3 +341,6 @@ export const Button = () => {
 }
 // 2025-07-20 13:12:51 | edit #42
 // TODO: Clean this up
+// 2025-07-20 13:19:01 | edit #52
+// Debug: check state flow
+console.log('State updated');
