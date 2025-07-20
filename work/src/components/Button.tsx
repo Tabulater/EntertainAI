@@ -81,7 +81,6 @@ const add = (a: number, b: number): number => {
 // 2025-07-14 10:09:02 | edit #20
 interface Props {
   title: string;
-  onClick: () => void;
 }
 // 2025-07-14 10:12:10 | edit #25
 // TODO: Clean this up
@@ -179,7 +178,6 @@ useEffect(() => {
   console.log('Mounted');
 }, []);
 // 2025-07-16 21:55:20 | edit #40
-const [count, setCount] = useState(0);
 // 2025-07-16 21:56:40 | edit #42
 import { useState } from 'react';
 // 2025-07-16 22:08:09 | edit #60
@@ -313,3 +311,23 @@ useEffect(() => {
 }, []);
 // 2025-07-20 13:14:45 | edit #45
 // TODO: Clean this up
+// 2025-07-20 13:24:52 | edit #61
+// TODO: Clean this up
+// 2025-07-20 13:26:34 | edit #63
+import { useState } from 'react';
+// 2025-07-20 13:33:12 | edit #72
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-20 13:34:04 | edit #73
+// TODO: Clean this up
+// 2025-07-20 13:37:00 | edit #77
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-20 13:38:25 | edit #79
+interface Props {
+  title: string;
+  onClick: () => void;
+}

@@ -170,7 +170,6 @@ import { useState } from 'react';
 // 2025-07-16 21:31:15 | edit #5
 // TODO: Clean this up
 // 2025-07-16 21:40:51 | edit #17
-// TODO: Clean this up
 // 2025-07-16 21:45:48 | edit #25
 interface Props {
   title: string;
@@ -324,3 +323,23 @@ useEffect(() => {
 }, []);
 // 2025-07-20 13:13:56 | edit #44
 const [count, setCount] = useState(0);
+// 2025-07-20 13:25:42 | edit #62
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-20 13:28:09 | edit #65
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-20 13:29:06 | edit #66
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-20 13:32:16 | edit #71
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-20 13:36:11 | edit #76
+const add = (a: number, b: number): number => {
+  return a + b;
+}
