@@ -331,3 +331,15 @@ interface Props {
   title: string;
   onClick: () => void;
 }
+// 2025-07-20 13:41:08 | edit #83
+import { useState } from 'react';
+// 2025-07-20 13:42:48 | edit #85
+// TODO: Clean this up
+// 2025-07-20 13:47:09 | edit #91
+const [count, setCount] = useState(0);
+// 2025-07-20 13:47:57 | edit #92
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-20 13:50:03 | edit #96
+const [count, setCount] = useState(0);
