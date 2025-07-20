@@ -20,7 +20,6 @@ interface Props {
 // 2025-07-13 13:50:08 | edit #38
 const [count, setCount] = useState(0);
 const [count, setCount] = useState(0);
-// 2025-07-13 13:59:04 | edit #54
 const [count, setCount] = useState(0);
 // 2025-07-13 14:03:54 | edit #62
 export const Button = () => {
@@ -158,7 +157,6 @@ useEffect(() => {
 // 2025-07-14 23:04:47 | edit #146
 import { useState } from 'react';
 // 2025-07-16 21:33:53 | edit #8
-const add = (a: number, b: number): number => {
   return a + b;
 }
 // TODO: Clean this up
@@ -411,3 +409,22 @@ interface Props {
 }
 // 2025-07-20 15:32:49 | edit #244
 const [count, setCount] = useState(0);
+// 2025-07-20 15:39:06 | edit #255
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-20 15:42:17 | edit #260
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-20 15:44:28 | edit #263
+const add = (a: number, b: number): number => {
+  return a + b;
+}
+// 2025-07-20 15:45:25 | edit #264
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-20 15:47:37 | edit #267
+useEffect(() => {
+  console.log('Mounted');
+}, []);

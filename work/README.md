@@ -169,7 +169,6 @@ import { useState } from 'react';
 // 2025-07-16 21:40:51 | edit #17
 // 2025-07-16 21:45:48 | edit #25
 interface Props {
-  title: string;
 }
 // 2025-07-16 21:47:01 | edit #27
 export const Button = () => {
@@ -253,7 +252,6 @@ const add = (a: number, b: number): number => {
 // 2025-07-16 23:49:30 | edit #209
 import { useState } from 'react';
 // 2025-07-16 23:51:04 | edit #212
-  title: string;
   onClick: () => void;
 }
 // 2025-07-16 23:56:12 | edit #220
@@ -448,4 +446,35 @@ export const Button = () => {
 // 2025-07-20 15:34:28 | edit #247
 const add = (a: number, b: number): number => {
   return a + b;
+}
+// 2025-07-20 15:35:00 | edit #248
+// TODO: Clean this up
+// 2025-07-20 15:35:56 | edit #249
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-20 15:41:29 | edit #259
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-20 15:48:00 | edit #268
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-20 15:48:59 | edit #269
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-20 15:52:33 | edit #275
+const [count, setCount] = useState(0);
+// 2025-07-20 15:54:41 | edit #278
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-20 15:55:25 | edit #279
+interface Props {
+  title: string;
+  onClick: () => void;
 }
