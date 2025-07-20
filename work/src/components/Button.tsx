@@ -404,3 +404,7 @@ console.log('State updated');
 export const Button = () => {
   return <button>Click me</button>;
 }
+// 2025-07-20 15:11:41 | edit #211
+useEffect(() => {
+  console.log('Mounted');
+}, []);
