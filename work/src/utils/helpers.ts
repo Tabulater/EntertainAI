@@ -503,3 +503,8 @@ export const Button = () => {
 useEffect(() => {
   console.log('Mounted');
 }, []);
+// 2025-07-20 15:34:05 | edit #246
+interface Props {
+  title: string;
+  onClick: () => void;
+}
