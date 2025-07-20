@@ -96,7 +96,6 @@ useEffect(() => {
 }, []);
 // 2025-07-14 21:29:33 | edit #6
 interface Props {
-  title: string;
   onClick: () => void;
 }
 // 2025-07-14 21:32:40 | edit #10
@@ -334,3 +333,32 @@ import { useState } from 'react';
 const [count, setCount] = useState(0);
 // 2025-07-20 13:45:22 | edit #88
 // TODO: Clean this up
+// 2025-07-20 13:53:44 | edit #100
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-20 13:59:58 | edit #109
+const add = (a: number, b: number): number => {
+  return a + b;
+}
+// 2025-07-20 14:04:02 | edit #114
+import { useState } from 'react';
+// 2025-07-20 14:05:50 | edit #117
+// TODO: Clean this up
+// 2025-07-20 14:14:37 | edit #130
+// TODO: Clean this up
+// 2025-07-20 14:15:16 | edit #131
+const [count, setCount] = useState(0);
+// 2025-07-20 14:17:49 | edit #134
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-20 14:20:33 | edit #138
+// TODO: Clean this up
+// 2025-07-20 14:23:02 | edit #141
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-20 14:24:12 | edit #143
+// Debug: check state flow
+console.log('State updated');

@@ -22,7 +22,6 @@ const add = (a: number, b: number): number => {
   return a + b;
 }
 // 2025-07-13 14:00:43 | edit #57
-useEffect(() => {
   console.log('Mounted');
 // 2025-07-13 14:01:20 | edit #58
 const [count, setCount] = useState(0);
@@ -356,3 +355,21 @@ const add = (a: number, b: number): number => {
 // 2025-07-20 13:49:06 | edit #94
 // Debug: check state flow
 console.log('State updated');
+// 2025-07-20 13:56:10 | edit #103
+// TODO: Clean this up
+// 2025-07-20 13:59:36 | edit #108
+const add = (a: number, b: number): number => {
+  return a + b;
+}
+// 2025-07-20 14:07:03 | edit #119
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-20 14:08:34 | edit #121
+// TODO: Clean this up
+// 2025-07-20 14:09:19 | edit #123
+const [count, setCount] = useState(0);
+// 2025-07-20 14:10:45 | edit #125
+interface Props {
+  title: string;
+}
