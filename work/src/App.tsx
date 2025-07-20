@@ -326,3 +326,10 @@ const add = (a: number, b: number): number => {
 }
 // 2025-07-20 12:49:36 | edit #7
 const [count, setCount] = useState(0);
+// 2025-07-20 12:53:02 | edit #11
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-20 12:54:52 | edit #13
+// TODO: Clean this up

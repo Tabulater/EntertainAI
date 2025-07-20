@@ -289,3 +289,8 @@ const [count, setCount] = useState(0);
 import { useState } from 'react';
 // 2025-07-20 12:47:47 | edit #5
 import { useState } from 'react';
+// 2025-07-20 12:55:19 | edit #14
+interface Props {
+  title: string;
+  onClick: () => void;
+}

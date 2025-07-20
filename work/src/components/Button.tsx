@@ -294,3 +294,7 @@ const add = (a: number, b: number): number => {
 const add = (a: number, b: number): number => {
   return a + b;
 }
+// 2025-07-20 12:51:09 | edit #9
+export const Button = () => {
+  return <button>Click me</button>;
+}
