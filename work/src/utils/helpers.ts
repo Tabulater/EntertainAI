@@ -499,3 +499,7 @@ export const Button = () => {
 export const Button = () => {
   return <button>Click me</button>;
 }
+// 2025-07-20 15:30:36 | edit #240
+useEffect(() => {
+  console.log('Mounted');
+}, []);
