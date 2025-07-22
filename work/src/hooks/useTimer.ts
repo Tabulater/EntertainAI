@@ -520,3 +520,8 @@ useEffect(() => {
 console.log('State updated');
 // 2025-07-22 00:50:34 | edit #202
 import { useState } from 'react';
+// 2025-07-22 00:53:51 | edit #207
+interface Props {
+  title: string;
+  onClick: () => void;
+}
