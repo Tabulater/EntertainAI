@@ -557,3 +557,6 @@ interface Props {
   title: string;
   onClick: () => void;
 }
+// 2025-07-22 01:16:32 | edit #242
+// Debug: check state flow
+console.log('State updated');

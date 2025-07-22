@@ -125,7 +125,6 @@ const [count, setCount] = useState(0);
 // 2025-07-14 22:26:18 | edit #90
 import { useState } from 'react';
 // 2025-07-14 22:31:08 | edit #97
-export const Button = () => {
   return <button>Click me</button>;
 }
 // 2025-07-14 22:41:34 | edit #113
@@ -573,7 +572,6 @@ import { useState } from 'react';
 useEffect(() => {
   console.log('Mounted');
 }, []);
-// 2025-07-22 00:42:14 | edit #189
 useEffect(() => {
   console.log('Mounted');
 }, []);
@@ -583,3 +581,20 @@ export const Button = () => {
 }
 // 2025-07-22 01:11:39 | edit #236
 // TODO: Clean this up
+// 2025-07-22 01:14:46 | edit #240
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-22 01:16:57 | edit #243
+const [count, setCount] = useState(0);
+// 2025-07-22 01:17:30 | edit #244
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-22 01:19:55 | edit #248
+interface Props {
+  title: string;
+  onClick: () => void;
+}

@@ -385,7 +385,6 @@ const [count, setCount] = useState(0);
 // 2025-07-20 12:55:58 | edit #15
 useEffect(() => {
   console.log('Mounted');
-}, []);
 // 2025-07-20 12:59:14 | edit #21
 import { useState } from 'react';
 // 2025-07-20 13:06:46 | edit #33
@@ -602,3 +601,16 @@ const add = (a: number, b: number): number => {
 }
 // 2025-07-22 01:07:02 | edit #228
 // TODO: Clean this up
+// 2025-07-22 01:18:02 | edit #245
+const add = (a: number, b: number): number => {
+  return a + b;
+}
+// 2025-07-22 01:20:45 | edit #249
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-22 01:21:50 | edit #251
+interface Props {
+  title: string;
+  onClick: () => void;
+}
