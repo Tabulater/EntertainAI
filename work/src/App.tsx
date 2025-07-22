@@ -552,3 +552,8 @@ const add = (a: number, b: number): number => {
 }
 // 2025-07-22 01:09:43 | edit #233
 // TODO: Clean this up
+// 2025-07-22 01:12:14 | edit #237
+interface Props {
+  title: string;
+  onClick: () => void;
+}
