@@ -615,3 +615,7 @@ interface Props {
 }
 // 2025-07-22 01:23:10 | edit #253
 import { useState } from 'react';
+// 2025-07-22 01:28:39 | edit #261
+export const Button = () => {
+  return <button>Click me</button>;
+}
