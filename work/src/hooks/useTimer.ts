@@ -406,3 +406,9 @@ import { useState } from 'react';
 const add = (a: number, b: number): number => {
   return a + b;
 }
+// 2025-07-21 22:34:57 | edit #2
+// TODO: Clean this up
+// 2025-07-21 22:35:39 | edit #3
+useEffect(() => {
+  console.log('Mounted');
+}, []);
