@@ -64,7 +64,6 @@ interface Props {
 export const Button = () => {
   return <button>Click me</button>;
 // 2025-07-14 09:33:41 | edit #18
-  console.log('Mounted');
 }, []);
 const add = (a: number, b: number): number => {
 }
@@ -461,6 +460,12 @@ export const Button = () => {
   return <button>Click me</button>;
 }
 // 2025-07-21 23:08:18 | edit #52
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-21 23:12:14 | edit #57
+const [count, setCount] = useState(0);
+// 2025-07-21 23:13:40 | edit #59
 export const Button = () => {
   return <button>Click me</button>;
 }

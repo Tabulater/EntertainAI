@@ -460,3 +460,6 @@ useEffect(() => {
 useEffect(() => {
   console.log('Mounted');
 }, []);
+// 2025-07-21 23:15:36 | edit #62
+// Debug: check state flow
+console.log('State updated');

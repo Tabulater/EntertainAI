@@ -504,3 +504,7 @@ const add = (a: number, b: number): number => {
 // TODO: Clean this up
 // 2025-07-21 23:10:58 | edit #55
 const [count, setCount] = useState(0);
+// 2025-07-21 23:11:26 | edit #56
+useEffect(() => {
+  console.log('Mounted');
+}, []);
