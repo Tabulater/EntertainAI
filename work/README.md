@@ -542,3 +542,25 @@ interface Props {
 }
 // 2025-07-22 00:13:28 | edit #149
 // TODO: Clean this up
+// 2025-07-22 00:21:11 | edit #160
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-22 00:22:06 | edit #161
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-22 00:23:46 | edit #163
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-22 00:25:34 | edit #166
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-22 00:26:57 | edit #168
+useEffect(() => {
+  console.log('Mounted');
+}, []);

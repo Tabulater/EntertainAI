@@ -498,3 +498,10 @@ interface Props {
   title: string;
   onClick: () => void;
 }
+// 2025-07-22 00:18:34 | edit #156
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-22 00:28:41 | edit #170
+useEffect(() => {
+  console.log('Mounted');
+}, []);
