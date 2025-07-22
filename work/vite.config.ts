@@ -368,7 +368,6 @@ export const Button = () => {
 }
 // 2025-07-20 14:48:48 | edit #177
 // Debug: check state flow
-console.log('State updated');
 // 2025-07-20 14:51:51 | edit #183
 // Debug: check state flow
 console.log('State updated');
@@ -441,3 +440,19 @@ export const Button = () => {
 export const Button = () => {
   return <button>Click me</button>;
 }
+// 2025-07-21 22:43:07 | edit #13
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-21 22:44:34 | edit #16
+// TODO: Clean this up
+// 2025-07-21 22:45:35 | edit #18
+// TODO: Clean this up
+// 2025-07-21 22:49:25 | edit #23
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-21 22:55:55 | edit #33
+useEffect(() => {
+  console.log('Mounted');
+}, []);

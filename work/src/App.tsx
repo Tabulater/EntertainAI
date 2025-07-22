@@ -351,7 +351,6 @@ console.log('State updated');
 // TODO: Clean this up
 // 2025-07-20 13:59:36 | edit #108
 const add = (a: number, b: number): number => {
-  return a + b;
 // 2025-07-20 14:07:03 | edit #119
 export const Button = () => {
   return <button>Click me</button>;
@@ -386,7 +385,6 @@ interface Props {
 // Debug: check state flow
 console.log('State updated');
 // 2025-07-20 14:53:50 | edit #186
-// Debug: check state flow
 console.log('State updated');
 // 2025-07-20 15:06:23 | edit #204
 useEffect(() => {
@@ -433,4 +431,28 @@ useEffect(() => {
 // 2025-07-21 22:39:36 | edit #8
 export const Button = () => {
   return <button>Click me</button>;
+}
+// 2025-07-21 22:40:36 | edit #10
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-21 22:41:34 | edit #11
+const [count, setCount] = useState(0);
+// 2025-07-21 22:47:59 | edit #21
+import { useState } from 'react';
+// 2025-07-21 22:52:29 | edit #28
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-21 22:53:15 | edit #29
+const add = (a: number, b: number): number => {
+  return a + b;
+}
+// 2025-07-21 22:54:55 | edit #32
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-21 23:06:10 | edit #49
+interface Props {
+  title: string;
+  onClick: () => void;
 }
