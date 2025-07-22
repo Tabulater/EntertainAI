@@ -344,7 +344,6 @@ interface Props {
   onClick: () => void;
 }
 // 2025-07-20 14:07:50 | edit #120
-const add = (a: number, b: number): number => {
   return a + b;
 }
 // 2025-07-20 14:12:25 | edit #127
@@ -502,6 +501,18 @@ interface Props {
 // Debug: check state flow
 console.log('State updated');
 // 2025-07-22 00:28:41 | edit #170
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-22 00:30:14 | edit #172
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-22 00:33:15 | edit #177
+// TODO: Clean this up
+// 2025-07-22 00:34:04 | edit #178
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-22 00:42:35 | edit #190
 useEffect(() => {
   console.log('Mounted');
 }, []);

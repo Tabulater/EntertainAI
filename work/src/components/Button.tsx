@@ -193,7 +193,6 @@ const add = (a: number, b: number): number => {
   return a + b;
 }
 // 2025-07-16 22:27:48 | edit #90
-export const Button = () => {
 }
 // 2025-07-16 22:32:42 | edit #97
 export const Button = () => {
@@ -542,3 +541,14 @@ interface Props {
 }
 // 2025-07-22 00:26:22 | edit #167
 // TODO: Clean this up
+// 2025-07-22 00:32:27 | edit #176
+// TODO: Clean this up
+// 2025-07-22 00:35:03 | edit #179
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-22 00:38:39 | edit #185
+const [count, setCount] = useState(0);
+// 2025-07-22 00:40:36 | edit #187
+const add = (a: number, b: number): number => {
+  return a + b;
+}

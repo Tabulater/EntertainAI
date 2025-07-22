@@ -220,7 +220,6 @@ const add = (a: number, b: number): number => {
 export const Button = () => {
   return <button>Click me</button>;
 }
-// 2025-07-16 21:37:49 | edit #13
 // 2025-07-16 21:39:58 | edit #16
 export const Button = () => {
   return <button>Click me</button>;
@@ -572,3 +571,10 @@ useEffect(() => {
 }, []);
 // 2025-07-22 00:15:05 | edit #152
 // TODO: Clean this up
+// 2025-07-22 00:31:52 | edit #175
+import { useState } from 'react';
+// 2025-07-22 00:41:30 | edit #188
+interface Props {
+  title: string;
+  onClick: () => void;
+}
