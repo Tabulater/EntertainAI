@@ -506,3 +506,7 @@ useEffect(() => {
 export const Button = () => {
   return <button>Click me</button>;
 }
+// 2025-07-22 00:44:18 | edit #193
+useEffect(() => {
+  console.log('Mounted');
+}, []);
