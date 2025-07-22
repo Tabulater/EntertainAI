@@ -187,7 +187,6 @@ import { useState } from 'react';
 const [count, setCount] = useState(0);
 // 2025-07-14 23:05:08 | edit #147
 useEffect(() => {
-}, []);
 // 2025-07-14 23:05:55 | edit #148
 interface Props {
   title: string;
@@ -286,7 +285,6 @@ useEffect(() => {
 // 2025-07-16 23:37:40 | edit #192
 // TODO: Clean this up
 // 2025-07-16 23:41:37 | edit #198
-useEffect(() => {
   console.log('Mounted');
 }, []);
 // 2025-07-17 00:07:27 | edit #237
@@ -334,7 +332,6 @@ export const Button = () => {
 console.log('State updated');
 // 2025-07-20 13:20:45 | edit #55
 export const Button = () => {
-  return <button>Click me</button>;
 }
 // 2025-07-20 13:27:21 | edit #64
 import { useState } from 'react';
@@ -471,3 +468,35 @@ export const Button = () => {
 // 2025-07-21 23:18:22 | edit #66
 // Debug: check state flow
 console.log('State updated');
+// 2025-07-21 23:22:39 | edit #72
+// TODO: Clean this up
+// 2025-07-21 23:23:56 | edit #74
+import { useState } from 'react';
+// 2025-07-21 23:24:52 | edit #76
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-21 23:26:55 | edit #80
+const [count, setCount] = useState(0);
+// 2025-07-21 23:34:00 | edit #90
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-21 23:35:12 | edit #92
+const add = (a: number, b: number): number => {
+  return a + b;
+}
+// 2025-07-21 23:37:01 | edit #95
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-21 23:39:16 | edit #98
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-21 23:40:11 | edit #100
+// TODO: Clean this up
+// 2025-07-21 23:41:23 | edit #102
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-21 23:42:35 | edit #104
+// TODO: Clean this up

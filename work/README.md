@@ -199,7 +199,6 @@ export const Button = () => {
 // TODO: Clean this up
 // 2025-07-16 22:30:58 | edit #95
 interface Props {
-  title: string;
   onClick: () => void;
 }
 // 2025-07-16 22:33:12 | edit #98
@@ -458,7 +457,6 @@ useEffect(() => {
 // 2025-07-20 15:48:00 | edit #268
 useEffect(() => {
   console.log('Mounted');
-}, []);
 // 2025-07-20 15:48:59 | edit #269
 interface Props {
   title: string;
@@ -509,3 +507,19 @@ useEffect(() => {
 }, []);
 // 2025-07-21 23:18:54 | edit #67
 // TODO: Clean this up
+// 2025-07-21 23:29:34 | edit #84
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-21 23:34:51 | edit #91
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-21 23:36:30 | edit #94
+export const Button = () => {
+  return <button>Click me</button>;
+}
+// 2025-07-21 23:41:47 | edit #103
+useEffect(() => {
+  console.log('Mounted');
+}, []);
