@@ -18,7 +18,6 @@ console.log('State updated');
 // 2025-07-13 13:56:46 | edit #50
 // 2025-07-13 14:03:22 | edit #61
 // Debug: check state flow
-// Debug: check state flow
 console.log('State updated');
 // 2025-07-13 14:09:54 | edit #73
 // TODO: Clean this up
@@ -547,3 +546,8 @@ useEffect(() => {
 }, []);
 // 2025-07-21 23:16:25 | edit #63
 import { useState } from 'react';
+// 2025-07-21 23:21:05 | edit #70
+interface Props {
+  title: string;
+  onClick: () => void;
+}
