@@ -239,7 +239,6 @@ useEffect(() => {
 }, []);
 // 2025-07-16 23:50:33 | edit #211
 useEffect(() => {
-  console.log('Mounted');
 }, []);
 // 2025-07-16 23:53:48 | edit #216
 const add = (a: number, b: number): number => {
@@ -543,3 +542,7 @@ useEffect(() => {
 }, []);
 // 2025-07-22 01:13:59 | edit #239
 // TODO: Clean this up
+// 2025-07-22 01:24:58 | edit #256
+export const Button = () => {
+  return <button>Click me</button>;
+}
