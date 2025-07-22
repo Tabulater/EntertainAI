@@ -557,7 +557,6 @@ interface Props {
 useEffect(() => {
   console.log('Mounted');
 }, []);
-// 2025-07-22 00:26:57 | edit #168
 useEffect(() => {
   console.log('Mounted');
 }, []);
@@ -578,3 +577,7 @@ useEffect(() => {
 useEffect(() => {
   console.log('Mounted');
 }, []);
+// 2025-07-22 01:02:42 | edit #222
+export const Button = () => {
+  return <button>Click me</button>;
+}

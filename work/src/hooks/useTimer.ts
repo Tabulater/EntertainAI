@@ -529,3 +529,8 @@ interface Props {
 // TODO: Clean this up
 // 2025-07-22 00:59:03 | edit #217
 const [count, setCount] = useState(0);
+// 2025-07-22 01:03:28 | edit #223
+interface Props {
+  title: string;
+  onClick: () => void;
+}

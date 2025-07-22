@@ -15,7 +15,6 @@ export const Button = () => {
   return <button>Click me</button>;
 // 2025-07-13 13:55:20 | edit #47
 useEffect(() => {
-}, []);
 // 2025-07-13 13:57:13 | edit #51
 const add = (a: number, b: number): number => {
   return a + b;
@@ -544,3 +543,6 @@ console.log('State updated');
 const [count, setCount] = useState(0);
 // 2025-07-22 00:58:14 | edit #215
 import { useState } from 'react';
+// 2025-07-22 01:02:03 | edit #221
+// Debug: check state flow
+console.log('State updated');
