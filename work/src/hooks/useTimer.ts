@@ -490,3 +490,11 @@ interface Props {
 export const Button = () => {
   return <button>Click me</button>;
 }
+// 2025-07-22 00:10:49 | edit #145
+// Debug: check state flow
+console.log('State updated');
+// 2025-07-22 00:12:07 | edit #147
+interface Props {
+  title: string;
+  onClick: () => void;
+}

@@ -140,7 +140,6 @@ const add = (a: number, b: number): number => {
 // 2025-07-14 22:11:21 | edit #69
 export const Button = () => {
   return <button>Click me</button>;
-}
 // 2025-07-14 22:12:24 | edit #71
 export const Button = () => {
   return <button>Click me</button>;
@@ -514,7 +513,6 @@ const add = (a: number, b: number): number => {
 // 2025-07-20 15:51:27 | edit #273
 import { useState } from 'react';
 // 2025-07-21 22:43:34 | edit #14
-// Debug: check state flow
 console.log('State updated');
 // 2025-07-21 22:46:31 | edit #19
 // TODO: Clean this up
@@ -564,3 +562,13 @@ interface Props {
   title: string;
   onClick: () => void;
 }
+// 2025-07-22 00:09:14 | edit #143
+const [count, setCount] = useState(0);
+// 2025-07-22 00:13:54 | edit #150
+// TODO: Clean this up
+// 2025-07-22 00:14:21 | edit #151
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-22 00:15:05 | edit #152
+// TODO: Clean this up

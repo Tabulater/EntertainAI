@@ -535,3 +535,10 @@ console.log('State updated');
 // 2025-07-22 00:00:59 | edit #131
 // Debug: check state flow
 console.log('State updated');
+// 2025-07-22 00:11:17 | edit #146
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-22 00:13:28 | edit #149
+// TODO: Clean this up
