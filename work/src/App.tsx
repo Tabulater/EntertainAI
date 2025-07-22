@@ -500,3 +500,15 @@ useEffect(() => {
 }, []);
 // 2025-07-21 23:42:35 | edit #104
 // TODO: Clean this up
+// 2025-07-21 23:58:58 | edit #128
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-21 23:59:42 | edit #129
+useEffect(() => {
+  console.log('Mounted');
+}, []);
+// 2025-07-22 00:06:04 | edit #138
+export const Button = () => {
+  return <button>Click me</button>;
+}

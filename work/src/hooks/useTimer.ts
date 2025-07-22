@@ -479,3 +479,14 @@ interface Props {
   title: string;
   onClick: () => void;
 }
+// 2025-07-22 00:00:37 | edit #130
+// TODO: Clean this up
+// 2025-07-22 00:05:16 | edit #137
+interface Props {
+  title: string;
+  onClick: () => void;
+}
+// 2025-07-22 00:08:17 | edit #142
+export const Button = () => {
+  return <button>Click me</button>;
+}
