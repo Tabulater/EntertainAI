@@ -31,13 +31,21 @@ class StoryStorage {
   async saveStory(project: StoryProject): Promise<void> {
     if (!this.db) throw new Error('Database not initialized');
     
+    console.log('Saving story:', project.story.id, project.story.title);
+    
     return new Promise((resolve, reject) => {
       const transaction = this.db!.transaction([STORE_NAME], 'readwrite');
       const store = transaction.objectStore(STORE_NAME);
       const request = store.put(project);
       
-      request.onerror = () => reject(request.error);
-      request.onsuccess = () => resolve();
+      request.onerror = () => {
+        console.error('Failed to save story:', request.error);
+        reject(request.error);
+      };
+      request.onsuccess = () => {
+        console.log('Story saved successfully:', project.story.id);
+        resolve();
+      };
     });
   }
 
@@ -62,8 +70,14 @@ class StoryStorage {
       const store = transaction.objectStore(STORE_NAME);
       const request = store.getAll();
       
-      request.onerror = () => reject(request.error);
-      request.onsuccess = () => resolve(request.result || []);
+      request.onerror = () => {
+        console.error('Failed to load stories:', request.error);
+        reject(request.error);
+      };
+      request.onsuccess = () => {
+        console.log('Loaded stories:', request.result?.length || 0);
+        resolve(request.result || []);
+      };
     });
   }
 

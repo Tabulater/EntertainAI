@@ -54,6 +54,7 @@ function Editor({ project, onBack, onPreview }: StoryEditorProps) {
 
   const handleSave = async () => {
     try {
+      console.log('Starting save process...');
       const updatedProject = {
         ...currentProject,
         story: {
@@ -66,7 +67,9 @@ function Editor({ project, onBack, onPreview }: StoryEditorProps) {
         }
       };
       
+      console.log('Saving project:', updatedProject.story.id, updatedProject.story.title);
       await storyStorage.saveStory(updatedProject);
+      console.log('Save completed successfully');
       setCurrentProject(updatedProject);
       setUnsavedChanges(false);
     } catch (error) {

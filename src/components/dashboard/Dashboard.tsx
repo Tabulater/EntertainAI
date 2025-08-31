@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
-import { BookOpen, Film, User, LogOut, Sparkles, Users, BarChart3, Target, Image } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { BookOpen, Film, User, LogOut, Sparkles, Users, BarChart3, Target, Image, TrendingUp, Clock, Star } from 'lucide-react';
 import { User as UserType } from '../../types/auth';
+import { StoryProject } from '../../types/story';
+import { storyStorage } from '../../utils/storage';
+import { getStoryStats } from '../../utils/storyUtils';
 import Collaboration from './Collaboration';
 import Analytics from './Analytics';
 
@@ -15,6 +18,77 @@ interface DashboardProps {
 export function Dashboard({ user, onSignOut, onNavigateToStories, onNavigateToMovies, onNavigateToMemes }: DashboardProps) {
   const [showCollaboration, setShowCollaboration] = useState(false);
   const [showAnalytics, setShowAnalytics] = useState(false);
+  const [stories, setStories] = useState<StoryProject[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [journeyStats, setJourneyStats] = useState({
+    totalStories: 0,
+    totalChapters: 0,
+    totalChoices: 0,
+    totalEndings: 0,
+    averageRating: 0,
+    totalViews: 0,
+    recentActivity: [] as any[]
+  });
+
+  useEffect(() => {
+    loadJourneyStats();
+  }, []);
+
+  const loadJourneyStats = async () => {
+    try {
+      setLoading(true);
+      const userStories = await storyStorage.getAllStories();
+      setStories(userStories);
+
+      // Calculate comprehensive stats
+      const stats = {
+        totalStories: userStories.length,
+        totalChapters: 0,
+        totalChoices: 0,
+        totalEndings: 0,
+        averageRating: 0,
+        totalViews: 0,
+        recentActivity: [] as any[]
+      };
+
+      // Calculate story-specific stats
+      userStories.forEach(story => {
+        const storyStats = getStoryStats(story.story);
+        stats.totalChapters += storyStats.nodeCount;
+        stats.totalChoices += storyStats.choiceCount;
+        stats.totalEndings += storyStats.endingCount;
+        
+        // Add to recent activity
+        stats.recentActivity.push({
+          type: 'story',
+          title: story.story.title,
+          date: story.story.updatedAt,
+          action: 'Updated'
+        });
+      });
+
+      // Sort recent activity by date
+      stats.recentActivity.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+      stats.recentActivity = stats.recentActivity.slice(0, 5); // Show last 5 activities
+
+      setJourneyStats(stats);
+    } catch (error) {
+      console.error('Failed to load journey stats:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Refresh stats when component comes into focus
+  useEffect(() => {
+    const handleFocus = () => {
+      loadJourneyStats();
+    };
+
+    window.addEventListener('focus', handleFocus);
+    return () => window.removeEventListener('focus', handleFocus);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
       {/* Header */}
@@ -40,6 +114,13 @@ export function Dashboard({ user, onSignOut, onNavigateToStories, onNavigateToMo
             
             {/* Action Buttons */}
             <div className="flex items-center gap-2">
+              <button
+                onClick={loadJourneyStats}
+                className="p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
+                title="Refresh Stats"
+              >
+                <TrendingUp className="w-5 h-5" />
+              </button>
               <button
                 onClick={() => setShowCollaboration(true)}
                 className="p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
@@ -200,28 +281,144 @@ export function Dashboard({ user, onSignOut, onNavigateToStories, onNavigateToMo
             Your Creative Journey
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="text-center p-4 bg-white/5 rounded-xl">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">0</div>
-              <p className="text-gray-300">Stories Created</p>
-              <p className="text-emerald-400 text-sm">Start your first story</p>
+          {loading ? (
+            <div className="text-center py-8">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
+              <p className="text-gray-300">Loading your creative journey...</p>
             </div>
-            <div className="text-center p-4 bg-white/5 rounded-xl">
-              <div className="text-3xl font-bold text-purple-400 mb-2">0</div>
-              <p className="text-gray-300">Movies Generated</p>
-              <p className="text-purple-400 text-sm">Create your first movie</p>
-            </div>
-            <div className="text-center p-4 bg-white/5 rounded-xl">
-              <div className="text-3xl font-bold text-pink-400 mb-2">0</div>
-              <p className="text-gray-300">Total Views</p>
-              <p className="text-pink-400 text-sm">Share to get views</p>
-            </div>
-            <div className="text-center p-4 bg-white/5 rounded-xl">
-              <div className="text-3xl font-bold text-blue-400 mb-2">-</div>
-              <p className="text-gray-300">Avg. Rating</p>
-              <p className="text-blue-400 text-sm">No ratings yet</p>
-            </div>
-          </div>
+          ) : (
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div className="text-center p-4 bg-white/5 rounded-xl">
+                  <div className="text-3xl font-bold text-emerald-400 mb-2">{journeyStats.totalStories}</div>
+                  <p className="text-gray-300">Stories Created</p>
+                  <p className="text-emerald-400 text-sm">
+                    {journeyStats.totalStories === 0 ? 'Start your first story' : `${journeyStats.totalChapters} total chapters`}
+                  </p>
+                </div>
+                <div className="text-center p-4 bg-white/5 rounded-xl">
+                  <div className="text-3xl font-bold text-purple-400 mb-2">{journeyStats.totalChoices}</div>
+                  <p className="text-gray-300">Choices Created</p>
+                  <p className="text-purple-400 text-sm">
+                    {journeyStats.totalChoices === 0 ? 'Add choices to your stories' : 'Branching narratives'}
+                  </p>
+                </div>
+                <div className="text-center p-4 bg-white/5 rounded-xl">
+                  <div className="text-3xl font-bold text-pink-400 mb-2">{journeyStats.totalEndings}</div>
+                  <p className="text-gray-300">Story Endings</p>
+                  <p className="text-pink-400 text-sm">
+                    {journeyStats.totalEndings === 0 ? 'Create story endings' : 'Multiple outcomes'}
+                  </p>
+                </div>
+                <div className="text-center p-4 bg-white/5 rounded-xl">
+                  <div className="text-3xl font-bold text-blue-400 mb-2">
+                    {journeyStats.averageRating > 0 ? journeyStats.averageRating.toFixed(1) : '-'}
+                  </div>
+                  <p className="text-gray-300">Avg. Rating</p>
+                  <p className="text-blue-400 text-sm">
+                    {journeyStats.averageRating > 0 ? 'Community feedback' : 'No ratings yet'}
+                  </p>
+                </div>
+              </div>
+
+              {/* Recent Activity */}
+              {journeyStats.recentActivity.length > 0 && (
+                <div className="mt-8">
+                  <h4 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                    <Clock className="w-5 h-5" />
+                    Recent Activity
+                  </h4>
+                  <div className="space-y-3">
+                    {journeyStats.recentActivity.map((activity, index) => (
+                      <div key={index} className="flex items-center gap-3 p-3 bg-white/5 rounded-lg">
+                        <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
+                        <div className="flex-1">
+                          <p className="text-white font-medium">{activity.title}</p>
+                          <p className="text-gray-400 text-sm">
+                            {activity.action} • {new Date(activity.date).toLocaleDateString()}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Progress Indicators */}
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="p-4 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border border-emerald-500/20 rounded-xl">
+                  <div className="flex items-center gap-2 mb-2">
+                    <TrendingUp className="w-5 h-5 text-emerald-400" />
+                    <span className="text-white font-semibold">Story Progress</span>
+                  </div>
+                  <div className="text-2xl font-bold text-emerald-400">{journeyStats.totalStories}</div>
+                  <p className="text-gray-300 text-sm">Stories in progress</p>
+                </div>
+                
+                <div className="p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl">
+                  <div className="flex items-center gap-2 mb-2">
+                    <BookOpen className="w-5 h-5 text-purple-400" />
+                    <span className="text-white font-semibold">Content Creation</span>
+                  </div>
+                  <div className="text-2xl font-bold text-purple-400">{journeyStats.totalChapters}</div>
+                  <p className="text-gray-300 text-sm">Chapters written</p>
+                </div>
+                
+                <div className="p-4 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 border border-blue-500/20 rounded-xl">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Star className="w-5 h-5 text-blue-400" />
+                    <span className="text-white font-semibold">Creative Milestones</span>
+                  </div>
+                  <div className="text-2xl font-bold text-blue-400">{journeyStats.totalEndings}</div>
+                  <p className="text-gray-300 text-sm">Completed endings</p>
+                </div>
+              </div>
+
+              {/* Recent Stories */}
+              {stories.length > 0 && (
+                <div className="mt-8">
+                  <h4 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                    <BookOpen className="w-5 h-5" />
+                    Your Stories
+                  </h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {stories.slice(0, 6).map((story) => {
+                      const storyStats = getStoryStats(story.story);
+                      return (
+                        <div key={story.story.id} className="p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
+                             onClick={() => onNavigateToStories()}>
+                          <div className="flex items-start justify-between mb-2">
+                            <h5 className="text-white font-semibold truncate flex-1">{story.story.title}</h5>
+                            <span className="text-xs text-gray-400 ml-2">
+                              {new Date(story.story.updatedAt).toLocaleDateString()}
+                            </span>
+                          </div>
+                          <p className="text-gray-400 text-sm mb-3 line-clamp-2">
+                            {story.story.description || 'No description'}
+                          </p>
+                          <div className="flex items-center gap-4 text-xs text-gray-400">
+                            <span>{storyStats.nodeCount} chapters</span>
+                            <span>{storyStats.choiceCount} choices</span>
+                            <span>{storyStats.endingCount} endings</span>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  {stories.length > 6 && (
+                    <div className="text-center mt-4">
+                      <button
+                        onClick={onNavigateToStories}
+                        className="text-emerald-400 hover:text-emerald-300 transition-colors"
+                      >
+                        View all {stories.length} stories →
+                      </button>
+                    </div>
+                  )}
+                </div>
+              )}
+            </>
+          )}
         </div>
 
         {/* Quick Actions */}

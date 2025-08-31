@@ -25,16 +25,11 @@ export default function Library({ onSelectStory, onPlayStory, onBack }: StoryLib
 
   const loadStories = async () => {
     try {
+      console.log('Loading stories...');
       setLoading(true);
       const existingStories = await storyStorage.getAllStories();
-      
-      // Delete all existing stories
-      for (const story of existingStories) {
-        await storyStorage.deleteStory(story.story.id);
-      }
-      
-      // Start with empty stories list
-      setStories([]);
+      console.log('Loaded stories:', existingStories.length, existingStories);
+      setStories(existingStories);
     } catch (error) {
       console.error('Failed to load stories:', error);
     } finally {
