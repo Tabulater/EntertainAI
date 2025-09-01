@@ -82,10 +82,10 @@ export default function MemeGen({ onBack }: MemeGenProps) {
         </div>
       )}
 
-      {/* Full Screen Iframe with Proxy */}
+      {/* Full Screen Iframe */}
       <iframe
         key={iframeKey}
-        src={`/api/proxy?path=`}
+        src="https://ai-meme-generator--immensepuma9566129.on.websim.com"
         className="w-full h-full border-0"
         title="AI Meme Generator"
         allow="camera; microphone; geolocation; clipboard-write; fullscreen"
