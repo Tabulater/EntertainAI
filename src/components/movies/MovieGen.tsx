@@ -12,8 +12,8 @@ export default function MovieGen({ onBack }: MovieGenProps) {
   const [iframeKey, setIframeKey] = useState(0);
 
   const urls = {
-    trailer: '/api/proxy?path=ai-movie-trailer-generator--relaxedbison6224150.on.websim.com/',
-    movie: '/api/proxy?path=aimoviemaker.on.websim.com/?v=2'
+    trailer: '/api/proxy/ai-movie-trailer',
+    movie: '/api/proxy/aimoviemaker'
   };
 
   const handleIframeLoad = () => {
